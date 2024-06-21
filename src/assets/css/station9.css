@@ -1,0 +1,68 @@
+/* 背景色 */
+body {
+  background-color: #C4C4C4;
+}
+
+header {
+  background-color: #ffffff;
+}
+
+footer {
+  background-color: #ffffff;
+}
+
+/* カードを横並びにするためのコンテナ */
+.card-container {
+  display: flex;
+  gap: 16px; /* カード間の余白を指定 */
+}
+
+/* カード */
+.card {
+  padding: 16px; /* カード内の余白を指定 */
+  background-color: #ffffff;
+}
+
+/* カード内の画像 */
+.card__img-top {
+  width: 288px;
+  height: 182px;
+  margin-bottom: 16px; /* 画像の下の余白を指定 */
+}
+
+/* タイトルのスタイル */
+.card__title {
+  color: #282828;
+  font-size: 14px;
+}
+
+/* 説明のスタイル */
+.card__description {
+  color: #282828;
+  font-size: 12px;
+}
+
+/* メディアクエリ: タブレット（iPad）用のスタイル */
+@media screen and (max-width: 768px) {
+  .card__title {
+    font-size: 13px; /* タイトルの文字サイズを小さく */
+  }
+
+  .card__description {
+    font-size: 12px; /* 説明の文字サイズを小さく */
+    overflow: hidden; /* 説明がはみ出した場合は省略する */
+    text-overflow: ellipsis; /* 説明がはみ出した場合は三点リーダーで省略する */
+    white-space: nowrap; /* 説明が改行されないようにする */
+  }
+}
+
+/* メディアクエリ: スマホ（iPhoneSE）用のスタイル */
+@media screen and (max-width: 320px) {
+  .card__title {
+    font-size: 12px; /* タイトルの文字サイズをさらに小さく */
+  }
+
+  .card__description {
+    display: none; /* 説明を非表示にする */
+  }
+}
